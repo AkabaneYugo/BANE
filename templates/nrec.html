@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='nrec.css') }}">
+    <title>Top</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='top.png') }}">
+        <div class="container">
+            <font size="6">「{{nyuryoku}}」と似ているのは</font><br>
+            <font size="14" class=drink>「{{nihonshu}}」</font><br>
+            <font size="5">このお酒にはこんなイメージがあるよ<br>{{key}}<br></font>
+        </div>
+        <div class="image">
+            <img src="{{ url_for('static', filename='otyoko.png') }}" width="75%" height="75%">
+        </div>
+        <div class="item">
+            <a href="/load2?nihonshu_name={{ nihonshu }}&times={{ times }}&x={{ x }}">
+                <img src="{{ url_for('static', filename='sonota.png') }}" width="75%" height="75%">
+            </a>
+            <a href="/nihon"><img src="{{ url_for('static', filename='back.png') }}" width="75%" height="75%"></a>
+            <a href="/"><img src="{{ url_for('static', filename='topitem.png') }}" width="75%" height="75%"></a>
+        </div>
+    </div>
+</body>

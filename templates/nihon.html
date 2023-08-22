@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='nihon.css') }}">
+    <title>Top</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='toptop.png') }}">
+        <div class="container">
+            <form action="/load" method="POST" enctype="multipart/form-data">
+                <div>
+                    <h1>
+                        <br><br>
+                        <u><b>気に入った日本酒の名前</b></u><br>
+                    <p>日本酒名：<input type="text" name="x"></p>
+                    </h1>
+                </div>
+                <div class="image">
+                    <br>
+                    <img src="{{ url_for('static', filename='love.png') }}" >
+                    <br><br>
+                <div>
+                    <input type="submit" value="送信" class="button">
+                </div>
+                <a href="/"><img src="{{ url_for('static', filename='back.png') }}" width="55%" height="55%"></a>
+            </form>
+        </div>
+    </div>
+</body>

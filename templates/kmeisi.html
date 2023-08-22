@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='kmeisi.css') }}">
+    <title>Top</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='kmeisi.png') }}">
+        <div class="container">
+            <div class="info">
+                <div class="face">
+                    <img src= "{{filebinary}}" style="margin: 20px; vertical-align: bottom; height: 150px;">
+                </div>
+                <h1 class="names">
+                    {{name}}<br>
+                    （{{nick}}）<br>
+                    酒耐性は「{{strong}}」です
+                </h1>
+            </div> 
+            <div>
+                <h1 class="favorite1">
+                    好きなお酒：<br>
+                </h1>
+                <h1 class="favorite2">
+                    {{like}}<br>
+                </h1>
+                <h1 class="favorite3">
+                    嫌いなお酒：<br>
+                </h1>
+                <h1 class="favorite4">
+                    {{hate}}
+                </h1>
+            </div>
+            <div class="item">
+                <a href="/meisi"><img src="{{ url_for('static', filename='back.png') }}" width="85%" height="85%"></a>
+                <a href="/"><img src="{{ url_for('static', filename='topitem.png') }}" width="85%" height="85%"></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

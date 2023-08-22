@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='start.css') }}">
+    <title>Top</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <div class="shutter"><h1 class="title">酔推-suisui-</h1></div>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='start.png') }}">
+        <div class="link-container">
+            <div>
+                <h2><a href="/top"><img src="{{ url_for('static', filename='onomimono.png') }}"></a></h2>
+                <h2><a href="/nihon"><img src="{{ url_for('static', filename='nihon.png') }}"></a></h2>
+                <h2><a href="/meisi"><img src="{{ url_for('static', filename='osakemeisi.png') }}"></a></h2>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

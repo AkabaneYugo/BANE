@@ -1,0 +1,130 @@
+
+/***カーテンのように開くアニメーション***/
+body::before, body::after{
+    content: "";
+    position: fixed; /*固定表示*/
+    top: 0;
+    width: 50vw;
+    height: 100vh;
+    background: #a79477; /*劇のカーテン色*/
+    animation: curtainOpen 3s forwards;
+    animation-delay: 0.1s; /*遅延時間*/
+    z-index: 999; /*最前面に*/
+}
+body::before{
+left: 0; /*左に開く*/
+}
+body::after{
+right: 0; /*右に開く*/
+}
+
+@keyframes curtainOpen{
+0%{
+    width: 50%; /*閉じている状態*/
+}
+100%{ 
+    width: 0; /*開く*/
+    visibility: hidden; /*非表示に*/
+}
+}
+
+/***サンプル装飾用***/
+body{
+padding: 1rem;
+}
+
+
+body {
+    font-family: serif;
+    }
+*{
+    font-family: serif;
+}
+
+
+
+
+/* 画像の上部に要素を配置するための親コンテナ */
+.image-container {
+    position: relative;
+    text-align: center;
+}
+
+
+
+
+.info {
+    position: absolute;
+    top: 27%; /* 画像の上部からの距離 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+/* 顔画像の配置 */
+.face {
+    display: inline-block; /* インラインブロック要素にすることで横並びに */
+    vertical-align: middle;
+}
+
+/* 名前の表示 */
+.names {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 1px; /* 顔画像との間隔を設定 */
+    width: 320px;
+}
+
+
+
+.favorite1{
+    position: absolute;
+    top: 35%; /* 画像の上部からの距離 */
+    left: 42%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.favorite2{
+    position: absolute;
+    top: 39%; /* 画像の上部からの距離 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.favorite3{
+    position: absolute;
+    top: 43%; /* 画像の上部からの距離 */
+    left: 42%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.favorite4{
+    position: absolute;
+    top: 47%; /* 画像の上部からの距離 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.item {
+    position: absolute;
+    top: 85%; /* 画像の上部からの距離 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}

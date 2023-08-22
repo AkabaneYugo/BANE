@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='meisi.css') }}">
+    <title>Top</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='meisi.png') }}">
+        <div class="link-container">
+            <form action="kmeisi" method="POST" enctype="multipart/form-data">
+                <div>
+                    <h2>
+                        <label for="name">本名：</label>
+                        <input type="text" id="name" name="name" placeholder="本名">	
+                    </h2>
+                </div>
+                <div>
+                    <h2>
+                        <label for="nick">あだ名：</label>
+                        <input type="text" id="nick" name="nick" placeholder="あだ名">	
+                    </h2>
+                </div>
+                <div> 
+                    <h2>
+                    <p>お酒への耐性は？</p>
+                    <input type="radio" name="strong" value="高い"> 高い
+                    <input type="radio" name="strong" value="普通" checked> 普通
+                    <input type="radio" name="strong" value="低い"> 低い
+                    </h2>
+                </div>
+                <div>
+                    <h2>
+                        <p>好きなお酒は？（2個まで）</p>
+                        <input type="text" id="like" name="like" placeholder="お酒">	
+                        <p>嫌いなお酒は？（2個まで）</p>
+                        <input type="text" id="hate" name="hate" placeholder="お酒">	
+                    </h2>
+                </div>
+                <div>
+                    <h2>
+                        <p>あなたのお写真（横長推奨）</p>
+                        <input type="file"  id="shasin" name="shasin">
+                    </h2>
+                </div>
+                <div>
+                    <input type="submit" value="送信" class="button">
+                </div>
+                <div>
+                    　　　
+                </div>
+                <div>
+                    <a href="/"><img src="{{ url_for('static', filename='back.png') }}"></a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
