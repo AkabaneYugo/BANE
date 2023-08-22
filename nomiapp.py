@@ -34,16 +34,17 @@ def meisi():
 @app.route("/nrec", methods=["GET", "POST"])
 def nrec():
     x = request.args.get("x")
+    print("xはできてるよ")
 
     store_cross_detail = pd.read_csv("store_cross_detail_retu2.csv")
-    print(store_cross_detail.head)
+    print(store_cross_detail.head())
 
     store_cross_detail = store_cross_detail.sort_values(
         ["id_x", "avg_cos_sim_rate"], ascending=[True, False]
     )
     df_sim_x = store_cross_detail[store_cross_detail["お酒の名前_x"].str.contains(x)]
     df_sim_x.reset_index(drop=True)
-    print("こんにちは")
+    print("ソートもできてるよ")
 
     def min_max(x, axis=None):
         min = x.min(axis=axis, keepdims=True)
