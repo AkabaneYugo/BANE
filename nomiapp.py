@@ -109,6 +109,7 @@ def next_nihonshu():
 
 @app.route("/nihon", methods=["GET", "POST"])
 def nihon():
+    print("nihonはできてるよ")
     return render_template("nihon.html")
 
 
